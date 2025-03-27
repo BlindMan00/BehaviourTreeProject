@@ -7,7 +7,7 @@ namespace NodeCanvas.Tasks.Conditions {
 
 	public class WithinRangeCT : ConditionTask {
 
-		public int sightRange;
+		public float sightRange;
 
 		public GameObject player;
 
@@ -17,7 +17,6 @@ namespace NodeCanvas.Tasks.Conditions {
 		{
 			float distance = Vector3.Distance(agent.transform.position, player.transform.position);
 
-			 Debug.Log("Distance: " + distance);  // Log distance to check if it's calculated correctly
 			if (distance <= sightRange)
 			{
 				return true;

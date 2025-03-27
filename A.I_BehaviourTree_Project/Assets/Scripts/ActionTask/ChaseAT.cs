@@ -13,7 +13,9 @@ namespace NodeCanvas.Tasks.Actions {
 
 		protected override void OnUpdate() 
 		{
-			agent.transform.position = Vector3.MoveTowards(agent.transform.position, player.transform.position, speed);
+			agent.speed = speed;
+
+			agent.SetDestination(player.transform.position);
 		}
 	}
 }
